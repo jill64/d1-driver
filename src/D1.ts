@@ -100,7 +100,7 @@ const checkError = (response: {
 }) => {
   if (!response.success) {
     throw new Error(
-      response.errors.map((e) => `${e.code}: ${e.message}`).join('\n')
+      response.errors.map((e) => `D1 Driver: [${e.code}] ${e.message}`).join('\n')
     )
   }
 }
@@ -148,7 +148,7 @@ export class D1 {
     const json = await res.json()
 
     if (!is_list_response(json)) {
-      throw new Error('Invalid response')
+      throw new Error('D1 Driver: Invalid list response')
     }
 
     checkError(json)
@@ -173,7 +173,7 @@ export class D1 {
 
     if (!is_create_response(json)) {
       console.error(json)
-      throw new Error(`Invalid response in create ${name}`)
+      throw new Error(`D1 Driver: Invalid response in create "${name}"`)
     }
 
     checkError(json)
@@ -196,7 +196,7 @@ export class D1 {
     const json = await res.json()
 
     if (!is_delete_response(json)) {
-      throw new Error('Invalid delete response')
+      throw new Error(`D1 Driver: Invalid delete response for "${uuid}"`)
     }
 
     checkError(json)
@@ -219,7 +219,7 @@ export class D1 {
     const json = await res.json()
 
     if (!is_get_response(json)) {
-      throw new Error('Invalid get response')
+      throw new Error(`D1 Driver: Invalid get response for "${uuid}"`)
     }
 
     checkError(json)
@@ -248,7 +248,7 @@ export class D1 {
     const json = await res.json()
 
     if (!is_query_response(json)) {
-      throw new Error('Invalid query response')
+      throw new Error(`D1 Driver: Invalid query response for "${uuid}" with "${sql}"`)
     }
 
     checkError(json)
