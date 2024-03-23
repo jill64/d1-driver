@@ -1,0 +1,31 @@
+{
+  "name": "d1-driver",
+  "description": "",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "!**/*.test.*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && npx publint",
+    "prepack": "npm run build",
+    "lint": "npx eslint . && npx depcheck",
+    "format": "npx prettier -w ."
+  },
+  "prettier": "@jill64/prettier-config",
+  "devDependencies": {
+    "@jill64/eslint-config-ts": "1.1.13",
+    "@jill64/prettier-config": "1.0.0",
+    "typescript": "5.4.3"
+  },
+  "dependencies": {
+    "typescanner": "0.5.3"
+  }
+}
