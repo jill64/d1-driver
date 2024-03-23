@@ -1,4 +1,15 @@
 <!----- BEGIN GHOST DOCS HEADER ----->
+
+# d1-driver
+
+<!----- BEGIN GHOST DOCS BADGES ----->
+
+<a href="https://npmjs.com/package/d1-driver"><img src="https://img.shields.io/npm/v/d1-driver" alt="npm-version" /></a> <a href="https://npmjs.com/package/d1-driver"><img src="https://img.shields.io/npm/l/d1-driver" alt="npm-license" /></a> <a href="https://npmjs.com/package/d1-driver"><img src="https://img.shields.io/npm/dm/d1-driver" alt="npm-download-month" /></a> <a href="https://npmjs.com/package/d1-driver"><img src="https://img.shields.io/bundlephobia/min/d1-driver" alt="npm-min-size" /></a>
+
+<!----- END GHOST DOCS BADGES ----->
+
+🌤️ Cloudflare D1 External Fetch Compatible Driver
+
 <!----- END GHOST DOCS HEADER ----->
 
 ## Installation
@@ -34,4 +45,9 @@ await d1.query(db_uuid, 'SELECT * FROM table_name')
 ```
 
 <!----- BEGIN GHOST DOCS FOOTER ----->
+
+## License
+
+[MIT](LICENSE)
+
 <!----- END GHOST DOCS FOOTER ----->
