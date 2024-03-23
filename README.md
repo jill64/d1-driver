@@ -1,6 +1,5 @@
-# d1-driver
-
-🌤️ Cloudflare D1 External Fetch Compatible Driver
+<!----- BEGIN GHOST DOCS HEADER ----->
+<!----- END GHOST DOCS HEADER ----->
 
 ## Installation
 
@@ -33,3 +32,6 @@ await d1.delete(db_uuid)
 // Query a database
 await d1.query(db_uuid, 'SELECT * FROM table_name')
 ```
+
+<!----- BEGIN GHOST DOCS FOOTER ----->
+<!----- END GHOST DOCS FOOTER ----->
