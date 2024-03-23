@@ -1,6 +1,6 @@
 {
   "name": "d1-driver",
-  "description": "",
+  "description": "🌤️ Cloudflare D1 External Fetch Compatible Driver",
   "version": "0.0.1",
   "type": "module",
   "files": [
@@ -27,5 +27,24 @@
   },
   "dependencies": {
     "typescanner": "0.5.3"
-  }
+  },
+  "homepage": "https://github.com/jill64/d1-driver#readme",
+  "bugs": "https://github.com/jill64/d1-driver/issues",
+  "author": {
+    "name": "jill64",
+    "email": "intents.turrets0h@icloud.com",
+    "url": "https://github.com/jill64",
+    "image": "https://avatars.githubusercontent.com/u/143883742?v=4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jill64/d1-driver.git",
+    "image": "https://opengraph.githubassets.com/26a4cf5b16622a4a004c3d367ce9ef548ff8df823ec15fb13111d02c55e2fb42/jill64/d1-driver"
+  },
+  "keywords": [
+    "cloudflare",
+    "d1",
+    "external",
+    "fetch"
+  ]
 }
