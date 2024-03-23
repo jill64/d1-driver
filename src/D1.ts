@@ -100,7 +100,9 @@ const checkError = (response: {
 }) => {
   if (!response.success) {
     throw new Error(
-      response.errors.map((e) => `D1 Driver: [${e.code}] ${e.message}`).join('\n')
+      response.errors
+        .map((e) => `D1 Driver: [${e.code}] ${e.message}`)
+        .join('\n')
     )
   }
 }
@@ -248,7 +250,9 @@ export class D1 {
     const json = await res.json()
 
     if (!is_query_response(json)) {
-      throw new Error(`D1 Driver: Invalid query response for "${uuid}" with "${sql}"`)
+      throw new Error(
+        `D1 Driver: Invalid query response for "${uuid}" with "${sql}"`
+      )
     }
 
     checkError(json)
