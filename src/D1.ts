@@ -149,11 +149,11 @@ export class D1 {
 
     const json = await res.json()
 
+    checkError(json)
+
     if (!is_list_response(json)) {
       throw new Error('D1 Driver: Invalid list response')
     }
-
-    checkError(json)
 
     return json
   }
@@ -173,12 +173,12 @@ export class D1 {
 
     const json = await res.json()
 
+    checkError(json)
+
     if (!is_create_response(json)) {
       console.error(json)
       throw new Error(`D1 Driver: Invalid response in create "${name}"`)
     }
-
-    checkError(json)
 
     return json
   }
@@ -197,11 +197,11 @@ export class D1 {
 
     const json = await res.json()
 
+    checkError(json)
+
     if (!is_delete_response(json)) {
       throw new Error(`D1 Driver: Invalid delete response for "${uuid}"`)
     }
-
-    checkError(json)
 
     return json
   }
@@ -220,11 +220,11 @@ export class D1 {
 
     const json = await res.json()
 
+    checkError(json)
+
     if (!is_get_response(json)) {
       throw new Error(`D1 Driver: Invalid get response for "${uuid}"`)
     }
-
-    checkError(json)
 
     return json
   }
@@ -249,13 +249,13 @@ export class D1 {
 
     const json = await res.json()
 
+    checkError(json)
+
     if (!is_query_response(json)) {
       throw new Error(
         `D1 Driver: Invalid query response for "${uuid}" with "${sql}"`
       )
     }
-
-    checkError(json)
 
     type QueryResponse = ExtractGuardType<typeof is_query_response>
 
