@@ -272,4 +272,22 @@ export class D1 {
 
     return json as QueryResult
   }
+
+  async raw(uuid: string, sql: string, params: (string | number)[] = []) {
+    const res = await this.fetch(
+      `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/d1/database/${uuid}/query`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.apiKey}`
+        },
+        body: JSON.stringify({ params, sql })
+      }
+    )
+
+    const json = await res.json()
+
+    return json as typeof is_query_response
+  }
 }
