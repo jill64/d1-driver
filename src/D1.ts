@@ -288,6 +288,6 @@ export class D1 {
 
     const json = await res.json()
 
-    return json as typeof is_query_response
+    return json as ExtractGuardType<typeof is_query_response>
   }
 }
