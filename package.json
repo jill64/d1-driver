@@ -23,7 +23,7 @@
   "devDependencies": {
     "@jill64/eslint-config-ts": "1.1.16",
     "@jill64/prettier-config": "1.0.0",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   },
   "dependencies": {
     "typescanner": "0.5.3"
