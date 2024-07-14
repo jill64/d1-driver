@@ -17,13 +17,17 @@
     "build": "tsc && npx publint",
     "prepack": "npm run build",
     "lint": "npx eslint . && npx depcheck",
-    "format": "npx prettier -w ."
+    "format": "npx prettier -w .",
+    "test": "vitest"
   },
   "prettier": "@jill64/prettier-config",
   "devDependencies": {
     "@jill64/eslint-config-ts": "1.1.29",
     "@jill64/prettier-config": "1.0.0",
-    "typescript": "5.5.3"
+    "@types/node": "^20.14.10",
+    "dotenv": "16.4.5",
+    "typescript": "5.5.3",
+    "vitest": "2.0.2"
   },
   "dependencies": {
     "typescanner": "0.5.3"
