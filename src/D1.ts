@@ -112,12 +112,10 @@ type ExtractGuardType<T> = T extends Condition<infer U> ? U : never
 export class D1 {
   private accountId
   private apiKey
-  private fetch
 
-  constructor(accountId: string, apiKey: string, fetch = globalThis.fetch) {
+  constructor(accountId: string, apiKey: string) {
     this.accountId = accountId
     this.apiKey = apiKey
-    this.fetch = fetch
   }
 
   async list(params?: { name?: string; page?: number; per_page?: number }) {
@@ -139,7 +137,7 @@ export class D1 {
       url.searchParams.set('per_page', per_page.toString())
     }
 
-    const res = await this.fetch(url.href, {
+    const res = await fetch(url.href, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -159,7 +157,7 @@ export class D1 {
   }
 
   async create(name: string) {
-    const res = await this.fetch(
+    const res = await fetch(
       `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/d1/database`,
       {
         method: 'POST',
@@ -184,7 +182,7 @@ export class D1 {
   }
 
   async delete(uuid: string) {
-    const res = await this.fetch(
+    const res = await fetch(
       `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/d1/database/${uuid}`,
       {
         method: 'DELETE',
@@ -207,7 +205,7 @@ export class D1 {
   }
 
   async get(uuid: string) {
-    const res = await this.fetch(
+    const res = await fetch(
       `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/d1/database/${uuid}`,
       {
         method: 'GET',
@@ -235,7 +233,7 @@ export class D1 {
     sql: string,
     params: (string | number)[] = []
   ) {
-    const res = await this.fetch(
+    const res = await fetch(
       `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/d1/database/${uuid}/query`,
       {
         method: 'POST',
@@ -274,7 +272,7 @@ export class D1 {
   }
 
   async raw(uuid: string, sql: string, params: (string | number)[] = []) {
-    const res = await this.fetch(
+    const res = await fetch(
       `https://api.cloudflare.com/client/v4/accounts/${this.accountId}/d1/database/${uuid}/query`,
       {
         method: 'POST',
