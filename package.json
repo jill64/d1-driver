@@ -26,7 +26,7 @@
     "@jill64/prettier-config": "1.0.0",
     "@types/node": "20.14.11",
     "dotenv": "16.4.5",
-    "typescript": "5.5.3",
+    "typescript": "5.5.4",
     "vitest": "2.0.4"
   },
   "dependencies": {
