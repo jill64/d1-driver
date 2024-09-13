@@ -27,7 +27,7 @@
     "@types/node": "20.16.5",
     "dotenv": "16.4.5",
     "typescript": "5.6.2",
-    "vitest": "2.1.0"
+    "vitest": "2.1.1"
   },
   "dependencies": {
     "typescanner": "0.5.3"
@@ -43,7 +43,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/d1-driver.git",
-    "image": "https://opengraph.githubassets.com/68e826be0d9c1a5f5323c9d933929bb64c6d4652f26a8bb5710b3df29d0588bc/jill64/d1-driver"
+    "image": "https://opengraph.githubassets.com/919f75e4c18a83702e611d6927f5d38b5f0a8023655fcde53d24c2e84345233e/jill64/d1-driver"
   },
   "keywords": [
     "cloudflare",
