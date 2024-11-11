@@ -22,7 +22,7 @@
   },
   "prettier": "@jill64/prettier-config",
   "devDependencies": {
-    "@jill64/eslint-config-ts": "1.1.51",
+    "@jill64/eslint-config-ts": "1.1.52",
     "@jill64/prettier-config": "1.0.0",
     "@types/node": "22.9.0",
     "dotenv": "16.4.5",
