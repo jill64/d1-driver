@@ -1,7 +1,7 @@
 {
   "name": "d1-driver",
   "description": "🌤️ Cloudflare D1 External Fetch Compatible Driver",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "files": [
     "dist",
@@ -22,7 +22,7 @@
   },
   "prettier": "@jill64/prettier-config",
   "devDependencies": {
-    "@jill64/eslint-config-ts": "2.0.4",
+    "@jill64/eslint-config-ts": "2.0.5",
     "@jill64/prettier-config": "1.0.0",
     "@types/node": "22.13.0",
     "dotenv": "16.4.7",
@@ -43,7 +43,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jill64/d1-driver.git",
-    "image": "https://opengraph.githubassets.com/3ff36758f23a7115d4258665ec5e36283d26f66fe6427b25f649846782207085/jill64/d1-driver"
+    "image": "https://opengraph.githubassets.com/90c1f08735fa79e847ebaf5965cae03fcf78237c399ffa8ef2cb6f85237cad89/jill64/d1-driver"
   },
   "keywords": [
     "cloudflare",
