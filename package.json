@@ -43,7 +43,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jill64/d1-driver.git",
-    "image": "https://opengraph.githubassets.com/354804cc2604079e2455195d9a309a26209b634418f2cf37471f625dcbe50307/jill64/d1-driver"
+    "image": "https://opengraph.githubassets.com/d355f7b109590bf4c337b06b48c86ec147a75d016203ad9b101e8022250ae453/jill64/d1-driver"
   },
   "keywords": [
     "cloudflare",
