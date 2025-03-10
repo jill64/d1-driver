@@ -1,33 +1,24 @@
+import { expect, test } from 'bun:test'
 import 'dotenv/config'
 import { env } from 'node:process'
-import { expect, test } from 'vitest'
 import { D1 } from '../src/index'
 
-test(
-  'E2E',
-  {
-    timeout: 30000
-  },
-  async ({ onTestFailed }) => {
-    const d1 = new D1(env.CLOUDFLARE_ACCOUNT_ID!, env.CLOUDFLARE_API_KEY!)
+test('E2E', async () => {
+  const d1 = new D1(env.CLOUDFLARE_ACCOUNT_ID!, env.CLOUDFLARE_API_KEY!)
 
-    const db = await d1.create(`d1-driver-test-${crypto.randomUUID()}`)
+  const db = await d1.create(`d1-driver-test-${crypto.randomUUID()}`)
 
-    expect(db.success).toBe(true)
+  expect(db.success).toBe(true)
 
-    console.log('db', db)
+  console.log('db', db)
 
-    const uuid = db.result?.uuid
+  const uuid = db.result?.uuid
 
-    if (!uuid) {
-      throw new Error('No UUID')
-    }
+  if (!uuid) {
+    throw new Error('No UUID')
+  }
 
-    onTestFailed(async () => {
-      const delete_result = await d1.delete(uuid)
-      console.log('delete_result', delete_result)
-    })
-
+  try {
     const list_result = await d1.list()
     console.log('list_result', list_result)
     expect(list_result.success).toBe(true)
@@ -49,5 +40,9 @@ test(
 
     const delete_result = await d1.delete(uuid)
     console.log('delete_result', delete_result)
+  } catch (e) {
+    const delete_result = await d1.delete(uuid)
+    console.log('delete_result', delete_result)
+    throw e
   }
-)
+})
