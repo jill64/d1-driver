@@ -14,20 +14,20 @@
     }
   },
   "scripts": {
-    "build": "tsc && npx publint",
-    "prepack": "npm run build",
-    "lint": "npx eslint . && npx depcheck",
-    "format": "npx prettier -w .",
-    "test": "vitest"
+    "build": "tsc && bunx publint",
+    "prepack": "bun run build",
+    "lint": "eslint .",
+    "format": "bunx prettier -w .",
+    "test": "bun test --timeout 30000"
   },
   "prettier": "@jill64/prettier-config",
   "devDependencies": {
     "@jill64/eslint-config-ts": "2.0.16",
     "@jill64/prettier-config": "1.0.0",
-    "@types/node": "22.13.0",
+    "@types/node": "22.13.10",
     "dotenv": "16.4.7",
-    "typescript": "5.7.3",
-    "vitest": "3.0.8"
+    "@types/bun": "1.2.4"
+    "typescript": "5.8.2",
   },
   "dependencies": {
     "typescanner": "0.5.3"
