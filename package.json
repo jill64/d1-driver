@@ -24,7 +24,7 @@
   "devDependencies": {
     "@jill64/eslint-config-ts": "2.0.20",
     "@jill64/prettier-config": "1.0.0",
-    "@types/node": "22.13.17",
+    "@types/node": "22.14.0",
     "dotenv": "16.4.7",
     "@types/bun": "1.2.5",
     "typescript": "5.8.2"
@@ -43,7 +43,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jill64/d1-driver.git",
-    "image": "https://opengraph.githubassets.com/2916af2fd2978398e0ffb3969f6f3506b526aeea809f2ea5e4740ddc02d76ff3/jill64/d1-driver"
+    "image": "https://opengraph.githubassets.com/b12fe641a1ceab2a429d01eaf10db5a5e492f9dd00b22b11fedd06f35173e8a7/jill64/d1-driver"
   },
   "keywords": [
     "cloudflare",
